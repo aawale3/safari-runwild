@@ -2,16 +2,18 @@ name: EAS Build
 
 on:
   push:
-    branches: [main]
-  pull_request:
+    branches:
+      - main
+      - feature/**
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -19,11 +21,8 @@ jobs:
       - name: Install EAS CLI
         run: npm install -g eas-cli
 
-      - name: Login to EAS
+      - name: Authenticate with EAS
         run: eas whoami || eas login --token ${{ secrets.EAS_TOKEN }}
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Run EAS Build (Android)
-        run: eas build --platform android --non-interactive
+      - name: Trigger EAS build
+        run: eas build --platform ios --non-interactive
