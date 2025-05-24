@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { colors, typography, spacing, borderRadius, shadows } from '@/constants/theme';
 import { MaterialIcons } from '@expo/vector-icons';
 import { LocalImage } from '@/components/common/LocalImage';
-//comment 
+//comment //add comments to push
 interface AnimalCardProps {
   name: string;
   description: string;
