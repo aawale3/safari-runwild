@@ -1,14 +1,17 @@
-name: EAS Build
+name: Build with EAS
 
 on:
   push:
     branches:
       - main
-      - feature/**
+      - feature/firebase-auth-journal
+  workflow_dispatch:
 
 jobs:
   build:
+    name: EAS Build
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -22,7 +25,9 @@ jobs:
         run: npm install -g eas-cli
 
       - name: Authenticate with EAS
-        run: eas whoami || eas login --token ${{ secrets.EAS_TOKEN }}
+        run: echo $EAS_TOKEN | eas login --with-token
+        env:
+          EAS_TOKEN: ${{ secrets.EAS_TOKEN }}
 
       - name: Trigger EAS build
-        run: eas build --platform ios --non-interactive
+        run: eas build --platform ios --non-interactive --profile development
