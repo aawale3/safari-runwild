@@ -124,4 +124,4 @@ eas build --platform android
 
 ## 📞 Support
 
-[Support contact information] 
+[Support contact information] # safari-runwild
