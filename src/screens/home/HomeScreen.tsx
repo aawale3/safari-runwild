@@ -1,5 +1,13 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, useWindowDimensions } from 'react-native';
+import { 
+  View, 
+  Text, 
+  TouchableOpacity, 
+  StyleSheet, 
+  useWindowDimensions,
+  Image,
+  ScrollView
+} from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
@@ -14,23 +22,64 @@ export function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.content}>
+      {/* App Bar */}
+      <View style={styles.appBar}>
+        <Text style={styles.appBarTitle}>Your Journey Starts Here</Text>
+      </View>
+
+      <ScrollView style={styles.scrollView} showsVerticalScrollIndicator={false}>
+        {/* Row of Images */}
+        <View style={styles.imageRow}>
+          <View style={styles.imageContainer}>
+            <Image
+              source={require('@/assets/images/UFE_Logo.png')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.imageContainer}>
+            <Image
+              source={require('@/assets/images/Run_Wild_Safari.png')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+          <View style={styles.imageContainer}>
+            <Image
+              source={require('@/assets/images/Harvesting_Wisdom.png')}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </View>
+        </View>
+
+        {/* Welcome Text */}
         <View style={styles.welcomeSection}>
-          <Text style={styles.title}>Welcome to Your Safari Expedition</Text>
-          <Text style={styles.subtitle}>
+          <Text style={styles.welcomeTitle}>Welcome to the African Expedition</Text>
+          <Text style={styles.welcomeSubtitle}>
             Discover the wonders of Africa through an immersive journey of conservation and education
           </Text>
         </View>
 
-        <View style={styles.ctaSection}>
+        {/* Start Journey Button */}
+        <View style={styles.buttonSection}>
           <TouchableOpacity
-            style={styles.ctaButton}
+            style={styles.startButton}
             onPress={() => navigation.navigate('Main', { screen: 'Itinerary' })}
           >
-            <Text style={styles.ctaButtonText}>Start Your Journey</Text>
+            <Text style={styles.startButtonText}>Start Your Expedition Journey</Text>
           </TouchableOpacity>
         </View>
-      </View>
+
+        {/* Featured Safari Image */}
+        <View style={styles.featuredImageContainer}>
+          <Image
+            source={require('@/assets/images/Run_Wild_Safari.png')}
+            style={styles.featuredImage}
+            resizeMode="cover"
+          />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -40,46 +89,88 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.ui.background,
   },
-  content: {
+  appBar: {
+    backgroundColor: colors.primary.main,
+    paddingVertical: spacing.md,
+    paddingHorizontal: spacing.lg,
+    alignItems: 'center',
+    ...shadows.md,
+  },
+  appBarTitle: {
+    fontFamily: typography.fonts.heading,
+    fontSize: typography.sizes['2xl'],
+    color: colors.text.inverse,
+    fontWeight: typography.weights.bold,
+    textAlign: 'center',
+  },
+  scrollView: {
     flex: 1,
-    padding: spacing.lg,
-    justifyContent: 'space-between',
+  },
+  imageRow: {
+    flexDirection: 'row',
+    paddingHorizontal: spacing.md,
+    paddingTop: spacing.lg,
+    gap: spacing.sm,
+  },
+  imageContainer: {
+    flex: 1,
+    height: 130,
+    borderRadius: borderRadius.md,
+    overflow: 'hidden',
+    ...shadows.sm,
+  },
+  image: {
+    width: '100%',
+    height: '100%',
   },
   welcomeSection: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     paddingHorizontal: spacing.lg,
+    paddingTop: spacing.xl,
+    alignItems: 'center',
   },
-  title: {
+  welcomeTitle: {
     fontFamily: typography.fonts.heading,
-    fontSize: typography.sizes['4xl'],
-    color: colors.text.primary,
+    fontSize: typography.sizes['2xl'],
+    color: colors.earth.brown,
     textAlign: 'center',
     marginBottom: spacing.md,
+    fontWeight: typography.weights.bold,
   },
-  subtitle: {
+  welcomeSubtitle: {
     fontFamily: typography.fonts.regular,
     fontSize: typography.sizes.lg,
     color: colors.text.secondary,
     textAlign: 'center',
     lineHeight: typography.lineHeights.relaxed * typography.sizes.lg,
   },
-  ctaSection: {
-    paddingBottom: spacing.xl,
+  buttonSection: {
+    paddingHorizontal: spacing.lg,
+    paddingTop: spacing.xl,
+    paddingBottom: spacing.lg,
   },
-  ctaButton: {
+  startButton: {
     backgroundColor: colors.primary.main,
     paddingVertical: spacing.md,
     paddingHorizontal: spacing.xl,
-    borderRadius: borderRadius.lg,
+    borderRadius: borderRadius.md,
     alignItems: 'center',
     ...shadows.md,
   },
-  ctaButtonText: {
+  startButtonText: {
     fontFamily: typography.fonts.regular,
     fontSize: typography.sizes.lg,
     color: colors.text.inverse,
     fontWeight: typography.weights.semibold,
+  },
+  featuredImageContainer: {
+    paddingHorizontal: spacing.lg,
+    paddingBottom: spacing.xl,
+    alignItems: 'center',
+  },
+  featuredImage: {
+    width: 282,
+    height: 379,
+    borderRadius: borderRadius.md,
+    ...shadows.lg,
   },
 }); 

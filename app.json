@@ -28,6 +28,12 @@
     },
     "plugins": [
       "expo-web-browser"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2f48c53f-19d0-4224-8cd7-1dde0de523dd"
+      }
+    },
+    "owner": "aawale3"
   }
 }
