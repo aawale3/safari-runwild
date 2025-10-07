@@ -1,13 +1,14 @@
 import React, { useState, useCallback } from 'react';
 import {
   View,
+  Text,
   StyleSheet,
   FlatList,
   RefreshControl,
   ActivityIndicator,
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { colors, spacing } from '@/constants/theme';
+import { colors, spacing, typography, borderRadius, shadows } from '@/constants/theme';
 import { DayCard } from '@/components/itinerary/DayCard';
 import { mockItineraryDays } from '@/data/itinerary';
 import { ItineraryDay } from '@/types/itinerary';
@@ -81,4 +82,4 @@ const styles = StyleSheet.create({
   listContent: {
     padding: spacing.md,
   },
-}); 
+});

@@ -1,33 +1,31 @@
 {
   "expo": {
-    "name": "safari-app",
+    "name": "Safari Run Wild",
     "slug": "safari-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#000000"
     },
     "ios": {
-      "bundleIdentifier": "com.safari.runwild",
+      "bundleIdentifier": "com.runwild.safari", 
       "supportsTablet": true
     },
     "android": {
+      "package": "com.runwild.safari",  
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#000000"
       },
       "edgeToEdgeEnabled": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "expo-web-browser"
-    ]
+    "plugins": ["expo-web-browser"]
   }
 }

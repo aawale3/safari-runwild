@@ -6,7 +6,7 @@ import { RootStackParamList, MainTabParamList } from '@/types/navigation';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 // Import screens (we'll create these next)
-import { HomeScreen } from '@/screens/home/HomeScreen';
+import HomeScreen from '@/screens/home/HomeScreen';
 import { ItineraryScreen } from '@/screens/itinerary/ItineraryScreen';
 import { ExplorerScreen } from '@/screens/explorer/ExplorerScreen';
 import JournalScreen from '@/screens/journal/JournalScreen';
@@ -14,6 +14,7 @@ import { PodcastScreen } from '@/screens/podcast/PodcastScreen';
 import { GuideScreen } from '@/screens/guide/GuideScreen';
 import { ResourcesScreen } from '@/screens/resources/ResourcesScreen';
 import JournalDetailScreen from '@/screens/JournalDetailScreen';
+import { AboutScreen } from '@/screens/about/AboutScreen';
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -79,15 +80,13 @@ export function AppNavigator() {
             contentStyle: { backgroundColor: '#FFFFFF' },
           }}
         >
-         
           <Stack.Screen name="Main" component={MainTabs} />
           <Stack.Screen name="Guide" component={GuideScreen} />
           <Stack.Screen name="Resources" component={ResourcesScreen} />
           <Stack.Screen name="JournalDetail" component={JournalDetailScreen} />
-      
-          {/* Add other stack screens as we create them */}
+          <Stack.Screen name="About" component={AboutScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
   );
-} 
+}

@@ -7,7 +7,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Arrival in Bulawayo',
     description: 'Welcome to Zimbabwe! Begin your safari adventure with a welcome dinner and orientation.',
     fullDescription: 'Your journey begins in Bulawayo, Zimbabwe\'s second-largest city. After settling into your accommodation, join us for a welcome dinner where you\'ll meet your fellow travelers and safari guides. We\'ll provide a comprehensive orientation about the upcoming days and answer any questions you may have.',
-    imageUrl: 'https://storage.googleapis.com/flutterflow-io-6f20.appspot.com/projects/african-expedition-safari-loyqm1/assets/0ezhsvo4qrvu/afarm.webp',
+    imageUrl: require('@/assets/images/bullawayo.jpg'),
     location: 'Bulawayo, Zimbabwe',
     activities: [
       'Airport Transfer',
@@ -32,7 +32,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Arnold Farm & UFE Project',
     description: 'Visit the historic Arnold Farm, explore UFE Project #1, and enjoy a walking tour and dinner.',
     fullDescription: 'Today we visit the historic Arnold Farm, where you\'ll learn about sustainable farming practices and conservation efforts. The farm serves as a model for UFE\'s agricultural initiatives. After lunch, we\'ll explore the surrounding area with a guided walking tour, learning about local flora and fauna.',
-    imageUrl: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/farm.jpg'),
     location: 'Arnold Farm, Matabeleland',
     activities: [
       'Farm Museum Tour',
@@ -58,7 +58,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Wildlife Conservation Center',
     description: 'Experience hands-on conservation work and learn about local wildlife protection efforts.',
     fullDescription: 'Spend the day at the Wildlife Conservation Center, where you\'ll participate in various conservation activities. Learn about local wildlife, their habitats, and the challenges they face. You\'ll have the opportunity to work alongside conservation experts and contribute to ongoing protection efforts.',
-    imageUrl: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/zebrajpg.webp'),
     location: 'Wildlife Conservation Center',
     activities: [
       'Conservation Workshop',
@@ -84,7 +84,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Community Visits',
     description: 'Village/school visits, UFE Project #2, and learn about wildlife cohabitation.',
     fullDescription: 'Today we\'ll visit local communities to understand how they coexist with wildlife. You\'ll learn about UFE\'s community engagement initiatives and see firsthand how sustainable practices are being implemented.',
-    imageUrl: 'https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/village.jpg'),
     location: 'Surrounding Communities',
     activities: [
       'Village Tour',
@@ -110,7 +110,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Farm Exploration',
     description: 'Tour Tiki Farm, UFE Project #3, and go on a game drive.',
     fullDescription: 'Visit Tiki Farm to learn about sustainable agriculture practices and wildlife-friendly farming methods. The afternoon brings an exciting game drive where you might spot various wildlife species in their natural habitat.',
-    imageUrl: 'https://images.unsplash.com/photo-1503917995318-6b8aeed6a3f8?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/farmtour.jpg'),
     location: 'Tiki Farm',
     activities: [
       'Farm Tour',
@@ -136,7 +136,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Wildlife Day',
     description: 'Bush walk, horseback safari, and game drive.',
     fullDescription: 'Experience wildlife up close with a guided bush walk, followed by a unique perspective from horseback. The day concludes with an evening game drive to spot nocturnal animals.',
-    imageUrl: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/horseback.jpg'),
     location: 'National Reserve',
     activities: [
       'Bush Walk',
@@ -162,7 +162,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Return to Bulawayo',
     description: 'Khami Ruins, market walk, and cultural immersion.',
     fullDescription: 'Return to Bulawayo to explore the historic Khami Ruins, a UNESCO World Heritage site. Experience the vibrant local markets and immerse yourself in the city\'s rich cultural heritage.',
-    imageUrl: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/kamiruins.jpg'),
     location: 'Bulawayo',
     activities: [
       'Khami Ruins Tour',
@@ -188,7 +188,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Matopos + Seed Bank',
     description: 'Historical cave tour and seed bank ecological education.',
     fullDescription: 'Explore the ancient Matopos Hills, home to significant historical caves and rock art. Visit the seed bank to learn about conservation of indigenous plant species and their importance to local ecosystems.',
-    imageUrl: 'https://images.unsplash.com/photo-1503917995318-6b8aeed6a3f8?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/kamiruins.jpg'),
     location: 'Matopos Hills',
     activities: [
       'Cave Tour',
@@ -214,7 +214,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Safari Camp',
     description: 'Campfire stories, group dinner, and wildlife safari.',
     fullDescription: 'Arrive at the safari camp in Hwange National Park. Experience the magic of the African bush with campfire stories, traditional dinner, and an evening wildlife safari.',
-    imageUrl: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/campfire.jpg'),
     location: 'Hwange Park',
     activities: [
       'Camp Setup',
@@ -240,7 +240,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Full Safari Day',
     description: 'Explore the savanna with game drives, bush lunch, and sundowners.',
     fullDescription: 'A full day of safari activities in Hwange National Park. Experience multiple game drives, enjoy a bush lunch, and watch the sunset with traditional sundowners.',
-    imageUrl: 'https://images.unsplash.com/photo-1503917995318-6b8aeed6a3f8?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/gameday.jpg'),
     location: 'Hwange',
     activities: [
       'Morning Game Drive',
@@ -266,7 +266,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Transfer + Reflection',
     description: 'Travel to Vic Falls and begin journaling, rest and wellness.',
     fullDescription: 'Transfer to Victoria Falls for a day of reflection and relaxation. Take time to journal your experiences and participate in wellness activities.',
-    imageUrl: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/vicfalls.jpeg'),
     location: 'Victoria Falls',
     activities: [
       'Transfer to Vic Falls',
@@ -292,7 +292,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Victoria Falls Tour',
     description: 'Guided tour, craft shopping, and a river cruise.',
     fullDescription: 'Experience the majestic Victoria Falls with a guided tour. Explore local crafts and enjoy a sunset cruise on the Zambezi River.',
-    imageUrl: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/vicfallscur.png'),
     location: 'Victoria Falls',
     activities: [
       'Falls Tour',
@@ -318,7 +318,7 @@ export const mockItineraryDays: ItineraryDay[] = [
     title: 'Final Reflections',
     description: 'Group wellness session and return logistics.',
     fullDescription: 'The final day includes a group wellness session, sharing of experiences, and preparation for departure. A perfect opportunity to reflect on the journey and plan future conservation efforts.',
-    imageUrl: 'https://images.unsplash.com/photo-1503917995318-6b8aeed6a3f8?w=800&auto=format&fit=crop',
+    imageUrl: require('@/assets/images/reflect.jpg'),
     location: 'Victoria Falls',
     activities: [
       'Wellness Session',

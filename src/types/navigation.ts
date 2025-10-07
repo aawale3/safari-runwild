@@ -18,11 +18,7 @@ export type RootStackParamList = {
     entries: JournalEntry[];
     currentIndex: number;
   };
-
-  // Auth/Profile
-  Profile: undefined;
-  Login: undefined;
-  Register: undefined;
+  About: undefined;
 };
 
 // Bottom tab navigation

@@ -31,7 +31,6 @@
     "expo-status-bar": "~2.2.3",
     "expo-updates": "^0.28.13",
     "expo-web-browser": "~14.1.6",
-    "firebase": "^9.23.0",
     "i18n-js": "^4.5.1",
     "react": "19.0.0",
     "react-native": "0.79.2",
