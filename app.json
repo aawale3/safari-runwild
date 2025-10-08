@@ -12,11 +12,11 @@
       "backgroundColor": "#000000"
     },
     "ios": {
-      "bundleIdentifier": "com.runwild.safari", 
+      "bundleIdentifier": "com.runwild.safari",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.runwild.safari",  
+      "package": "com.runwild.safari",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#000000"
@@ -26,6 +26,13 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-web-browser"]
+    "plugins": [
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "2f48c53f-19d0-4224-8cd7-1dde0de523dd"
+      }
+    }
   }
 }
