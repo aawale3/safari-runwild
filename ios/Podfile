@@ -60,5 +60,15 @@ target 'safariapp' do
         end
       end
     end
+
+    # Fix for glog compilation error
+    installer.pods_project.targets.each do |target|
+      if target.name == 'glog'
+        target.build_configurations.each do |config|
+          config.build_settings['HEADER_SEARCH_PATHS'] ||= '$(inherited) '
+          config.build_settings['HEADER_SEARCH_PATHS'] << '"${PODS_ROOT}/glog/src" '
+        end
+      end
+    end
   end
 end
