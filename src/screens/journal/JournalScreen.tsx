@@ -105,7 +105,6 @@ export default function JournalScreen() {
                 onValueChange={setMood}
                 minimumTrackTintColor={colors.primary.main}
                 maximumTrackTintColor={colors.earth.ochre}
-                thumbStyle={styles.thumb}
               />
               <View style={styles.moodEmojis}>
                 <Text style={styles.moodEmoji}>😞</Text>
@@ -237,7 +236,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing.md,
   },
   moodContainer: {
-    backgroundColor: colors.ui.card,
+    backgroundColor: colors.ui.surface,
     padding: spacing.lg,
     borderRadius: borderRadius.lg,
     ...shadows.sm,
@@ -252,11 +251,6 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 40,
   },
-  thumb: {
-    backgroundColor: colors.primary.main,
-    width: 20,
-    height: 20,
-  },
   moodEmojis: {
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -269,7 +263,7 @@ const styles = StyleSheet.create({
     marginBottom: spacing['2xl'],
   },
   uploadButton: {
-    backgroundColor: colors.ui.card,
+    backgroundColor: colors.ui.surface,
     padding: spacing.lg,
     borderRadius: borderRadius.lg,
     alignItems: 'center',
@@ -298,7 +292,7 @@ const styles = StyleSheet.create({
     borderRadius: borderRadius.lg,
     padding: spacing.md,
     textAlignVertical: 'top',
-    backgroundColor: colors.ui.card,
+    backgroundColor: colors.ui.surface,
     fontSize: typography.sizes.md,
     color: colors.text.primary,
   },
@@ -327,7 +321,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.primary.main,
   },
   newButton: {
-    backgroundColor: colors.ui.card,
+    backgroundColor: colors.ui.surface,
     borderWidth: 1,
     borderColor: colors.primary.main,
   },
@@ -344,7 +338,7 @@ const styles = StyleSheet.create({
     maxHeight: 400,
   },
   entryCard: {
-    backgroundColor: colors.ui.card,
+    backgroundColor: colors.ui.surface,
     padding: spacing.md,
     borderRadius: borderRadius.lg,
     marginBottom: spacing.md,
