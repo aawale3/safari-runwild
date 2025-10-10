@@ -92,6 +92,15 @@ export const HomeScreen: React.FC = () => {
             <Text style={styles.cardSubtitle}>Listen & Learn</Text>
           </TouchableOpacity>
         </View>
+        
+        {/* Learn More Button under Explore section */}
+        <TouchableOpacity 
+          style={styles.learnMoreButton} 
+          onPress={() => navigation.navigate('About')}
+          activeOpacity={0.85}
+        >
+          <Text style={styles.learnMoreText}>Learn More About Our Mission →</Text>
+        </TouchableOpacity>
       </View>
 
       {/* 🏕️ Campsite Button */}
@@ -321,6 +330,22 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontSize: 20,
     fontWeight: '700',
+  },
+  learnMoreButton: {
+    backgroundColor: '#4B6043',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 20,
+    marginTop: spacing.lg,
+    alignSelf: 'center',
+    ...shadows.sm,
+    elevation: 4,
+  },
+  learnMoreText: {
+    color: '#FFFFFF',
+    fontSize: 14,
+    fontWeight: '600',
+    textAlign: 'center',
   },
   readMoreButton: {
     backgroundColor: '#385723',
